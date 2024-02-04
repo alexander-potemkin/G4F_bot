@@ -3,23 +3,36 @@
 Quick and dirty OpenAI API compatible server for HF chat.
 
 ```shell
-git clone https://github.com/karpovall/G4F_bot.git
-cd G4F_bot
+git clone https://github.com/alexander-potemkin/HFChatServer.git && cd HFChatServer
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python3 server.py &
 ```
-You can switch model by changing its name.
 
-There are list of models:
+## How to use
 
-"mistralai/Mixtral-8x7B-Instruct-v0.1",
+`pip install openai`
 
-"meta-llama/Llama-2-70b-chat-hf",
+Use example, in Python, slightly altered version of [the official doc]([url](https://github.com/openai/openai-python)):
 
-"NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
+```python
+import os
+from openai import OpenAI
 
-"mistralai/Mistral-7B-Instruct-v0.2",
+client = OpenAI(
+    api_key='iddqd',
+)
 
-"openchat/openchat-3.5-0106"
+chat_completion = client.chat.completions.create(
+    messages=[
+        {
+            "role": "user",
+            "content": "Say this is a test",
+        }
+    ],
+    model="gpt-3.5-turbo",
+)
+```
+
+Available list of models is the following: ``, ``, ``.
