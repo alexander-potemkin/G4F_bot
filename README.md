@@ -32,8 +32,8 @@ chat_completion = client.chat.completions.create(
             "content": "Say this is a test",
         }
     ],
-    model="openchat/openchat-3.5-0106",
+    model="whatever",
 )
 ```
 
-Available list of models is the following: `mistralai/Mixtral-8x7B-Instruct-v0.1`, `meta-llama/Llama-2-70b-chat-hf`, `NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO`, `mistralai/Mistral-7B-Instruct-v0.2`, `openchat/openchat-3.5-0106`.
+Server can work with the following models: `mistralai/Mixtral-8x7B-Instruct-v0.1`, `meta-llama/Llama-2-70b-chat-hf`, `NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO`, `mistralai/Mistral-7B-Instruct-v0.2`, `openchat/openchat-3.5-0106` - the source code has to be adjusted; or server functionality needs to extended to support model choosing via request (ideally).
