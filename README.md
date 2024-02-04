@@ -21,6 +21,7 @@ import os
 from openai import OpenAI
 
 client = OpenAI(
+    base_url="http://localhost:8787",
     api_key='iddqd',
 )
 
