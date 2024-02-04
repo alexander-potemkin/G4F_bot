@@ -1,21 +1,12 @@
 # README
 
-# **Установка**
+Quick and dirty OpenAI API compatible server for HF chat.
 
-```bash
+```shell
 git clone https://github.com/karpovall/G4F_bot.git
-```
-
-```bash
 cd G4F_bot
-```
-
-```bash
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
-```
-
-# Запуск
-
-```bash
 python3 server.py &
 ```
